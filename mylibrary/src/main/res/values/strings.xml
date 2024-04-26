@@ -1,0 +1,3 @@
+<resources>
+    <string name="network_error">连接超时</string>
+</resources>

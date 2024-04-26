@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp">
+
+    <TextView
+        android:id="@+id/tv_wallpaper_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/_222222"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/search_hot"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wallpaper_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_wallpaper_author" />
+
+    <TextView
+        android:id="@+id/tv_wallpaper_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="17"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_wallpaper_author"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wallpaper_author" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_download_number"
+        app:layout_constraintEnd_toStartOf="@+id/tv_download_number"
+        app:layout_constraintTop_toTopOf="@+id/tv_download_number" />
+
+    <TextView
+        android:id="@+id/tv_download_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="999"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_wallpaper_des"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/tv_wallpaper_des" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_download_number">
+
+        <LinearLayout
+            android:id="@+id/ht_wallpaper_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

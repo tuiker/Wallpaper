@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.wallpaper.mylibrary'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //轮播图
+    api 'io.github.youth5201314:banner:2.2.3'
+
+    //沉浸式导航栏
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    //屏幕适配
+    api 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+
+    api 'com.google.code.gson:gson:2.10.1'
+
+    api "androidx.work:work-runtime:2.7.1"
+
+    api 'com.airbnb.android:lottie:4.2.0'
+
+    api 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+    api 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+
+    // Kotlin 协程
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+    api("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    //aes
+    api 'org.bouncycastle:bcprov-jdk15on:1.67'
+    //流式布局
+    api 'com.google.android.flexbox:flexbox:3.0.0'
+    //room
+//    api "androidx.room:room-runtime:2.4.2"
+//    annotationProcessor "androidx.room:room-compiler:2.4.2"
+    //日期选择
+    api 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.13'
+    //设置头像
+    api 'com.github.gzu-liyujiang.AndroidPicker:ImagePicker:4.1.13'
+
+//    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4"
+
+    //刷新
+//    api 'com.dinuscxj:recyclerrefreshlayout:2.0.5'
+    api("io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.3")
+
+    api(platform("com.google.firebase:firebase-bom:32.3.1"))
+    api("com.google.firebase:firebase-analytics-ktx")
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserFeedbackActivity">
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="@string/user_feedback"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:onClick="back"
+        android:src="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/feedback_type"
+        android:textColor="@color/_222222"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF3F34"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/user_feedback_selected_border"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp"
+        android:text="@string/user_feedback"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/tv_suggestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/user_feedback_border"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp"
+        android:text="@string/optimization_suggestions"
+        android:textColor="@color/_222222"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_feedback"
+        app:layout_constraintStart_toEndOf="@+id/tv_feedback"
+        app:layout_constraintTop_toTopOf="@+id/tv_feedback" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="20dp"
+        android:background="#FAFAFA"
+        app:layout_constraintTop_toBottomOf="@+id/tv_feedback"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/feedback"
+        android:textColor="@color/_222222"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF3F34"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0/200"
+        android:textColor="#C8CACC"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+    <EditText
+        android:id="@+id/et_user_feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:hint="@string/problem_or_suggestion"
+        android:maxLength="200"
+        android:textColor="#303133"
+        android:textColorHint="#ACACAD"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <LinearLayout
+        android:id="@+id/ll_feedback_img"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/et_user_feedback"
+        app:layout_constraintTop_toBottomOf="@id/et_user_feedback" />
+
+    <TextView
+        android:id="@+id/tv_get_image"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:background="@drawable/img_num_border"
+        android:gravity="center|bottom"
+        android:paddingBottom="20dp"
+        android:text="0/3"
+        android:textColor="#969799"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_feedback_img"
+        app:layout_constraintStart_toEndOf="@+id/ll_feedback_img"
+        app:layout_constraintTop_toTopOf="@+id/ll_feedback_img" />
+
+    <ImageView
+        android:id="@+id/iv_get_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/user_feed_img"
+        app:layout_constraintEnd_toEndOf="@+id/tv_get_image"
+        app:layout_constraintStart_toEndOf="@+id/ll_feedback_img"
+        app:layout_constraintStart_toStartOf="@id/tv_get_image"
+        app:layout_constraintTop_toTopOf="@+id/tv_get_image" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_feedback_img"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/user_feedback_btn_border"
+        android:text="@string/user_feedback_btn"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@+id/view11" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_commit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_commit"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/submit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FindWallpaperActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="@+id/find_wallpaper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/find_wallpaper" />
+
+    <EditText
+        android:id="@+id/find_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/wallpaper_find_border"
+        android:gravity="center_vertical"
+        android:hint="@string/hot_search_hint"
+        android:maxLines="1"
+        android:paddingVertical="9dp"
+        android:paddingStart="40dp"
+        android:singleLine="true"
+        android:textColor="#303133"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/find"
+        app:layout_constraintBottom_toBottomOf="@+id/find_wallpaper"
+        app:layout_constraintStart_toStartOf="@+id/find_wallpaper"
+        app:layout_constraintTop_toTopOf="@+id/find_wallpaper" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/colse"
+        app:layout_constraintBottom_toBottomOf="@+id/find_wallpaper"
+        app:layout_constraintEnd_toEndOf="@+id/find_wallpaper"
+        app:layout_constraintTop_toTopOf="@+id/find_wallpaper" />
+
+    <TextView
+        android:id="@+id/tv_recently_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/recent_searches"
+        android:textColor="@color/_222222"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_wallpaper" />
+
+    <TextView
+        android:id="@+id/tv_clear_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/close_history"
+        android:textColor="#969799"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_recently_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_recently_search" />
+
+    <com.wallpaper.myView.FlexBoxLayoutMaxLines
+        android:id="@+id/flexboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:maxLine="3"
+        app:justifyContent="flex_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recently_search"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/search_hot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/hot_search"
+        android:textColor="@color/_222222"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_hot_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_wallpaper_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_wallpaper" />
+
+    <LinearLayout
+        android:id="@+id/ll_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_wallpaper">
+
+        <ImageView
+            android:id="@+id/iv_search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/no_result" />
+
+        <TextView
+            android:id="@+id/tv_search_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/no_result"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

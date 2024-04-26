@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:tag="WallpaperListFragment"
+    tools:context=".fragment.WallpaperListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/find_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/wallpaper_find_border"
+            android:gravity="center_vertical"
+            android:paddingStart="40dp"
+            android:text="@string/hot_search_hint"
+            android:textColor="#969799"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/find"
+            app:layout_constraintBottom_toBottomOf="@+id/find_wallpaper"
+            app:layout_constraintStart_toStartOf="@+id/find_wallpaper"
+            app:layout_constraintTop_toTopOf="@+id/find_wallpaper" />
+
+        <com.dinuscxj.refresh.RecyclerRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find_wallpaper">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wallpaper_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp" />
+        </com.dinuscxj.refresh.RecyclerRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+</FrameLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingWallpaperActivity">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:banner_auto_loop="false" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting_wallpaper_border"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.wallpaper.myView.ImageAvatar
+            android:id="@+id/iv_avatar"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/set_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="---"
+            android:textColor="@color/_222222"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+
+        <!--        <TextView-->
+        <!--            android:layout_width="76dp"-->
+        <!--            android:layout_height="28dp"-->
+        <!--            android:background="@drawable/author_btn_border"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/work"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/iv_avatar" />-->
+
+        <TextView
+            android:id="@+id/tv_author_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_author_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_author_title" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/download_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_author_introduce" />
+
+        <TextView
+            android:id="@+id/tv_download_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="-"
+            android:textColor="#444444"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/like"
+            app:layout_constraintStart_toEndOf="@id/tv_download_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_author_introduce" />
+
+        <TextView
+            android:id="@+id/tv_like_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="-"
+            android:textColor="#444444"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <RelativeLayout
+            android:id="@+id/rt_like"
+            android:layout_width="60dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/like_btn_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_download_number">
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/btn_like" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/setting_wallpaper"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/setting_wallpaper_btn_border"
+            android:text="@string/setting_wallpaper"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rt_like"
+            app:layout_constraintTop_toBottomOf="@id/tv_download_number" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/setting_wallpaper"
+            app:layout_constraintEnd_toEndOf="@+id/setting_wallpaper"
+            app:layout_constraintStart_toEndOf="@+id/rt_like"
+            app:layout_constraintTop_toTopOf="@+id/setting_wallpaper"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/submit" />
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/setting_wallpaper"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="46dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            android:background="@drawable/setting_wallpaper_btn_border"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/rt_like"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_download_number">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:text="@string/setting_wallpaper"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="16sp" />-->
+        <!--        </RelativeLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_collect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/loading"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
