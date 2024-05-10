@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Wallpaper</string>
-    <string name="fb_appid" translatable="false">000</string>
-    <string name="facebook_client_token" translatable="false">000</string>
+    <string name="app_name">Wallpaper Mini Tool</string>
+    <string name="fb_appid" translatable="false">318365537734859</string>
+    <string name="facebook_client_token" translatable="false">e2fad5f878eeb1817b7348531ff9ac7c</string>
     <string name="login_welcome">壁紙へようこそ</string>
     <string name="login_phone">携帯番号を入力してください</string>
     <string name="login_captcha">検証コード</string>

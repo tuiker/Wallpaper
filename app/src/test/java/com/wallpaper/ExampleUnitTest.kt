@@ -1,4 +1,4 @@
-package com.wallpaper
+package com.wallpaper.mini
 
 import org.junit.Test
 

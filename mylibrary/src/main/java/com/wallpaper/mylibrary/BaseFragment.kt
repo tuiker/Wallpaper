@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
+import com.wallpaper.mini.mylibrary.R
 import java.nio.charset.StandardCharsets
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec

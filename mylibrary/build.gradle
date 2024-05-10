@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.wallpaper.mylibrary'
+    namespace 'com.wallpaper.mini.mylibrary'
     compileSdk 33
 
     defaultConfig {

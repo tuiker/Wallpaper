@@ -1,8 +1,6 @@
 package com.wallpaper.mylibrary.utils
 
 import android.text.Editable
-import android.util.Log
-import kotlin.math.log
 
 class StringToEditable {
     companion object{

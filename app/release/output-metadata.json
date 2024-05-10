@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.wallpaper",
+  "applicationId": "com.wallpaper.mini",
   "variantName": "release",
   "elements": [
     {

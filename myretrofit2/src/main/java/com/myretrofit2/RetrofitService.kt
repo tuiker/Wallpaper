@@ -110,12 +110,11 @@ class RetrofitService {
         fun getWallpaperAd(
             @Url path: String,
         ): Call<WallpaperAdBean?>?
-        //保存热搜关键词
+        //获取热搜关键词列表
         @GET
-        fun saveSearchKeyword(
+        fun findTopHotSearchList(
             @Url path: String,
-            @Body requestBody: SaveSearchRequestData?,
-        ): Call<SuccessBean?>?
+        ): Call<HotSearchListBean?>?
     }
 
     interface ApiPostService {
@@ -189,11 +188,11 @@ class RetrofitService {
             @Query("page") page: Int,
             @Query("pageSize") pageSize: Int
         ): Call<HistoryListBean?>?
-
-        //获取热搜关键词列表
+        //保存热搜关键词
         @POST
-        fun findTopHotSearchList(
+        fun saveSearchKeyword(
             @Url path: String,
-        ): Call<HotSearchListBean?>?
+            @Body requestBody: SaveSearchRequestData?,
+        ): Call<SuccessBean?>?
     }
 }

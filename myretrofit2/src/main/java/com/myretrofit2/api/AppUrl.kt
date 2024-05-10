@@ -2,8 +2,9 @@ package com.myretrofit2.api
 
 class AppUrl {
     companion object {
-        const val API = "http://192.168.0.27:8080/"
-//        const val API = "http://wallpaper.miss9u.xyz:8080/"
+//        const val API = "http://192.168.0.167:8080/"//本地
+//        const val API = "http://wallpaper.miss9u.xyz:8080/"//测试
+        const val API = "http://www.wallpapermini.xyz/apis/"//正式
 
         const val userLogin = "mobile/consumer/consumerLogin" //用户登录
         const val userUpdate = "mobile/consumer/update" //修改用户信息
@@ -21,7 +22,7 @@ class AppUrl {
         const val collectList = "mobile/favorites/getMyCollect" //分页查询收藏壁纸
         const val getMyFavoritesList = "mobile/favorites/getMyFavorites" //收藏夹
         const val setWallpaperRecord = "mobile/downloadRecord/addDownloadRecord"//设置壁纸记录埋点
-        const val clickAdRecord = "/mobile/advTriggerRecord/addAdvTriggerRecord"//点击广告记录埋点
+        const val clickAdRecord = "mobile/advTriggerRecord/addAdvTriggerRecord"//点击广告记录埋点
         const val favoritesWallpaper = "mobile/wallpaper/pageWallpaperInFavorites"//根据ID查询收藏夹里的壁纸
         const val unFavorite = "mobile/favorites/cancelCollect" //取消收藏
         const val saveSearchKeyword = "mobile/hotSearch/saveSearchKeyword" //保存热搜关键词

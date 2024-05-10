@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_recently_search" />
 
-    <com.wallpaper.myView.FlexBoxLayoutMaxLines
+    <com.wallpaper.mini.myView.FlexBoxLayoutMaxLines
         android:id="@+id/flexboxLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

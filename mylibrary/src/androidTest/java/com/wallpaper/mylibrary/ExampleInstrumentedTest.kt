@@ -1,4 +1,4 @@
-package com.wallpaper.mylibrary
+package com.wallpaper.mini.mylibrary
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.wallpaper.mylibrary.test", appContext.packageName)
+        assertEquals("com.wallpaper.mini.mylibrary.test", appContext.packageName)
     }
 }
